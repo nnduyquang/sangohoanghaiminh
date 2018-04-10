@@ -4,7 +4,10 @@
             <div class="p_info_detail col-md-12">
                 <div class="row">
                     <div class="col-md-6">
+                        <a class="fancybox" data-fancybox="gallery-ti2"
+                           href="{{url('/').'/'.$data['product']->image}}">
                         {{ Html::image($data['product']->image,'',array('class'=>'p_product_img'))}}
+                        </a>
                     </div>
                     <div id="p-short-info" class="col-md-6">
                         <h1 class="title">{{$data['product']->name}}</h1>

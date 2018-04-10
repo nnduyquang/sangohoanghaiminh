@@ -11,7 +11,8 @@ Route::get('/category', function () {
     return view('frontend.common.menu.m-category');
 });
 Route::get('/trang/{path}','FrontendController@getPageContent');
-
+Route::get('/bai-viet/{path}','FrontendController@getCategoryPostContent');
+Route::get('/bai-viet/{pathParent}/{pathSub}','FrontendController@getPostDetail');
 Route::get('/admin/sml_login', 'AuthController@checklogin');
 Route::post('sml_login', 'AuthController@login')->name('login');
 Route::get('/admin/sml_logout', 'AuthController@logout')->name('logout');

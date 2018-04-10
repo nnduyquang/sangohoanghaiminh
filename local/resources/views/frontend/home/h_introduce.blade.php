@@ -27,7 +27,7 @@
                 </p>
             </div>
             <div id="h_introduce_bottom" class="col-md-12">
-                {{ Html::image('images/beauty/h_introduce_bar.png','',array('class'=>'h_introduce_bar_img'))}}
+                {{ Html::image('images/beauty/h_introduce_bar_1.jpg','',array('class'=>'h_introduce_bar_img'))}}
             </div>
         </div>
     </div>

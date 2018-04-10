@@ -1,0 +1,35 @@
+@extends('frontend.master')
+@section('title')
+    @if($data['type']==1)
+{{$data['newsMain']->seo_title}}
+    @endif
+    @if($data['type']==2)
+{{$data['news']->seo_title}}
+    @endif
+@stop
+@section('description')
+    @if($data['type']==1)
+{{$data['newsMain']->seo_description}}
+    @endif
+    @if($data['type']==2)
+{{$data['news']->seo_description}}
+    @endif
+@stop
+@section('keyword')
+    @if($data['type']==1)
+{{$data['newsMain']->seo_keywords}}
+    @endif
+    @if($data['type']==2)
+{{$data['news']->seo_keywords}}
+    @endif
+@stop
+@section('styles')
+    {{ Html::style('css/themes/default/default.css') }}
+@stop
+@section('slider')
+    @include('frontend.common.slider')
+@stop
+@section('container')
+    @include('frontend.home.h_introduce')
+    @include('frontend.news.news_info')
+@stop

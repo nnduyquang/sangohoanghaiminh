@@ -27,13 +27,6 @@ class FrontendController extends Controller
     }
 
 
-
-//    public function getServiceByCategory($path)
-//    {
-//        $data = $this->frontendRepository->getServiceByCategory($path);
-//        return view('frontend.' . $data['categoryPost']->template, compact('data'));
-//    }
-
     public function getAllListCategoryAndProduct()
     {
         $data = $this->frontendRepository->getAllListCategoryAndProduct();
@@ -46,15 +39,6 @@ class FrontendController extends Controller
         return view('frontend.product.index', compact('data'));
     }
 
-//    public function getServiceInfo($categoryPath, $servicePath){
-//        $data = $this->frontendRepository->getServiceInfo($categoryPath, $servicePath);
-//        return view('frontend.'.$data['service']->template,compact('data'));
-//    }
-
-//    public function getMainPage($path){
-//        $data=$this->frontendRepository->getMainPage($path);
-//        return view('frontend.'.$data[0]->template,compact('data'));
-//    }
 
     public function getPageContent($path)
     {

@@ -33,10 +33,14 @@
     }
 
   }
+  img.h_product_category_img{
+    height: 250px;
+    margin-top: 20px;
+  }
   .list-product {
     margin-bottom: 25px;
     .one-product {
-      margin-top: 40px;
+      margin-top: 20px;
       position: relative;
       transition: all 0.2s;
       .img-product {

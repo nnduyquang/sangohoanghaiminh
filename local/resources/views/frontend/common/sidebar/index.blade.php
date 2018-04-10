@@ -1,4 +1,4 @@
-<div id="sidebar" class="col-md-12">
+<div id="sidebar" class="col-md-12 p-0">
 
     <h3>DANH MỤC SẢN PHẨM</h3>
     @for($i=0;$i<count($sidebar['categoryProducts']);$i++)
@@ -24,11 +24,17 @@
         <h3>HỖ TRỢ TRỰC TUYẾN</h3>
         <ul class="ul-ht-info">
             <li>
-                <h4 class="ht-name">Lê Duy Huy</h4>
-                <div>Zalo 1: 0971.703.972</div>
-                <div>Zalo 2: 0933.589.089</div>
-                {{--<div>Email: phunsuongduyhuy@gmail.com</div>--}}
+                <h4 class="ht-name">Thép Khánh Nam</h4>
+                <div><i class="fas fa-phone-square" style="color:#004792"></i> 0938.318.678</div>
+                <div><i class="fas fa-phone-square" style="color:#004792"></i> 0914.675.777</div>
+                <div><i class="fas fa-envelope-square" style="color:#004792"></i> vlxdtaysaigon@gmail.com</div>
             </li>
         </ul>
+    </div>
+    <div class="one-item">
+        {{ Html::image('images/beauty/sidebar_1.jpeg','',array('class'=>'sidebar_img'))}}
+    </div>
+    <div class="one-item">
+        {{ Html::image('images/beauty/sidebar_2.jpg','',array('class'=>'sidebar_img'))}}
     </div>
 </div>

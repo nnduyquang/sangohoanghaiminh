@@ -47,7 +47,7 @@ class FrontendRepository implements FrontendRepositoryInterface
             }
         }
         $news = Post::where('post_type', function ($query) {
-            $query->select('id')->from(with(new CategoryItem)->getTable())->where('path', 'tin-tuc');
+            $query->select('id')->from(with(new CategoryItem)->getTable())->where('path', 'cong-trinh-mau');
         })->take(3)->get();
         foreach ($news as $key => $item) {
             $item->description = cat_chuoi_dai_thanh_ngan(loai_bo_html_tag($item->description), 90);
