@@ -1,9 +1,9 @@
 @extends('frontend.master')
 @section('title')
-    Nội Thất
+    Sàn Gỗ Hoàng Hải Minh
 @stop
 @section('description')
-    Nội Thất
+    Công Ty TNHH Nội Thất Hoàng Hải Minh Chuyên Sàn Gỗ Nhập Khẩu
 @stop
 @section('styles')
     {{ Html::style('css/themes/default/default.css') }}
