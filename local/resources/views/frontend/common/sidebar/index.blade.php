@@ -1,4 +1,4 @@
-<div id="sidebar" class="col-md-12 p-0">
+<div id="sidebar" class="col-md-12 p-0 d-none d-md-block d-lg-block">
 
     <h3>DANH MỤC SẢN PHẨM</h3>
     @for($i=0;$i<count($sidebar['categoryProducts']);$i++)
@@ -24,10 +24,9 @@
         <h3>HỖ TRỢ TRỰC TUYẾN</h3>
         <ul class="ul-ht-info">
             <li>
-                <h4 class="ht-name">Thép Khánh Nam</h4>
-                <div><i class="fas fa-phone-square" style="color:#004792"></i> 0938.318.678</div>
-                <div><i class="fas fa-phone-square" style="color:#004792"></i> 0914.675.777</div>
-                <div><i class="fas fa-envelope-square" style="color:#004792"></i> vlxdtaysaigon@gmail.com</div>
+                <h4 class="ht-name">Nội Thất Hoàng Hải Minh</h4>
+                <div><i class="fas fa-phone-square" style="color:#004792"></i> 0962.599.482</div>
+                <div><i class="fas fa-envelope-square" style="color:#004792"></i> sangohoanghaiminh@gmail.com</div>
             </li>
         </ul>
     </div>

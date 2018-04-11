@@ -72,6 +72,8 @@ class CategoryProductController extends Controller
         $isActive = $request->input('page_is_active');
         $image = $request->input('image');
         $image = substr($image, strpos($image, 'images'), strlen($image) - 1);
+        $imageMobile = $request->input('image_mobile');
+        $imageMobile = substr($imageMobile, strpos($imageMobile, 'images'), strlen($imageMobile) - 1);
         if ($parentID != CATEGORY_POST_CAP_CHA) {
             $categoryproduct->parent_id = $parentID;
             $level = CategoryItem::where('id', '=', $parentID)->first()->level;
@@ -102,6 +104,7 @@ class CategoryProductController extends Controller
         $categoryproduct->type = CATEGORY_PRODUCT;
         $categoryproduct->path = chuyen_chuoi_thanh_path($name);
         $categoryproduct->image = $image;
+        $categoryproduct->image_mobile = $imageMobile;
         $categoryproduct->save();
         return redirect()->route('categoryproduct.index')->with('success', 'Tạo Mới Thành Công Chuyên Mục');
     }
@@ -165,6 +168,8 @@ class CategoryProductController extends Controller
         $isActive = $request->input('page_is_active');
         $image = $request->input('image');
         $image = substr($image, strpos($image, 'images'), strlen($image) - 1);
+        $imageMobile = $request->input('image_mobile');
+        $imageMobile = substr($imageMobile, strpos($imageMobile, 'images'), strlen($imageMobile) - 1);
         if ($parentID != CATEGORY_POST_CAP_CHA) {
             $categoryproduct->parent_id = $parentID;
             $level = CategoryItem::where('id', '=', $parentID)->first()->level;
@@ -195,6 +200,7 @@ class CategoryProductController extends Controller
         $categoryproduct->type = CATEGORY_PRODUCT;
         $categoryproduct->path = chuyen_chuoi_thanh_path($name);
         $categoryproduct->image = $image;
+        $categoryproduct->image_mobile = $imageMobile;
         $categoryproduct->save();
         return redirect()->route('categoryproduct.index')->with('success', 'Cập Nhật Thành Công Chuyên Mục');
     }

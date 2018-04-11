@@ -21,8 +21,8 @@
   background: white;
   -webkit-transition: left 0.3s ease, -webkit-box-shadow 0.3s ease 0.2s;
   transition: left 0.3s ease, box-shadow 0.3s ease 0.2s;
-  -webkit-box-shadow: 0.5em 0 0 0 #1ba8ff, 0.6em 0 0 0 #1ba8ff;
-  box-shadow: 0.5em 0 0 0 #1ba8ff, 0.6em 0 0 0 #1ba8ff;
+  -webkit-box-shadow: 0.5em 0 0 0 $sub-color, 0.6em 0 0 0 $sub-color;
+  box-shadow: 0.5em 0 0 0 $sub-color, 0.6em 0 0 0 $sub-color;
 }
 .sidebar #close {
   //float: right;
@@ -99,12 +99,12 @@
 
 }
 .sidebar .background-sidebar{
-  background-image: url(../images/logo/logo_main.png);
+  background-image: url(../images/logo/logo_footer.png);
   height: calc(56px*4);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-  background-color: #79bbff;
+  background-color: white;
 }
 .footer a {
   color: #17a689;

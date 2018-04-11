@@ -3,7 +3,13 @@
         <div class="row">
             <div class="ca_info_detail col-md-12">
                 <h1 class="title">{{$data['category']->name}}</h1>
+                <div class="d-none d-md-block">
                 {{ Html::image($data['category']->image,'',array('class'=>'ca_info_intro_img'))}}
+                </div>
+                <div class="d-lg-none d-md-none">
+                    {{ Html::image($data['category']->image_mobile,'',array('class'=>'ca_info_intro_img'))}}
+                </div>
+
                 <div class="description">
                     {!! $data['category']->description !!}
                 </div>

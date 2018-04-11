@@ -1,4 +1,4 @@
-<div id="special">
+<div id="special" class="d-none d-md-block">
     <div class="container p-0">
         <div class="row">
             <div class="col-md-3">

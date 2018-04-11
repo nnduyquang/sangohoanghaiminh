@@ -1,11 +1,11 @@
-<div id="menu" class="container-fluid p-0">
+<div id="menu" class="container-fluid p-0 d-none d-md-block">
     <div id="menu_top">
         <div class="container">
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-7 justify-content-left align-self-center text-left">
-                        <span><i class="fa fa-phone" aria-hidden="true"></i> 0965.322.239 - 0901.196.676</span>
-                        <span><i class="fa fa-home" aria-hidden="true"></i> 55/4 KP3 Hà Huy Giáp, Q.12, TPHCM</span>
+                        <span><i class="fa fa-phone" aria-hidden="true"></i> 0962.599.482</span>
+                        <span><i class="fa fa-home" aria-hidden="true"></i> 809 Lũy Bán Bích, Tân Thành, Tân Phú, TPHCM</span>
                     </div>
                     {{--<div class="col-md-2 p-0">--}}
                     {{--{{ Html::image('images/temps/logo/logo_demo.png','',array('class'=>'menu_logo'))}}--}}

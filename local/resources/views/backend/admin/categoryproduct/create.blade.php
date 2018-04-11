@@ -55,7 +55,17 @@
                 <div class="form-group">
                     {{ Html::image('','',array('id'=>'showHinh','class'=>'show-image'))}}
                 </div>
+                <div class="form-group">
+                    <strong>Hình Đại Diện Trên Mobile: </strong>
+                    {!! Form::text('image_mobile', null, array('class' => 'form-control','id'=>'pathImageMobile')) !!}
+                    <br>
+                    {!! Form::button('Tìm', array('id' => 'btnBrowseImageMobile','class'=>'btn btn-primary')) !!}
+                </div>
+                <div class="form-group">
+                    {{ Html::image('','',array('id'=>'showHinhMobile','class'=>'show-image'))}}
+                </div>
             </div>
+
         </div>
     </div>
     <hr>
