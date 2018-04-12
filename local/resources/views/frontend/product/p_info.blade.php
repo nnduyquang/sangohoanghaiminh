@@ -25,7 +25,7 @@
                             <span class="price-contact">Liên Hệ</span>
                         @endif
                         {{--<span class="price-contact">Liên Hệ</span>--}}
-                        <input class="btn-confirm btn" type="button" value="0971.703.972">
+                        <input class="btn-confirm btn" type="button" value="0962.599.482">
                     </div>
                 </div>
                 <div class="col-md-12 p-description">

@@ -3,9 +3,11 @@
         <div class="h_product_info col-md-12 p-0">
             @foreach($data['categoryProducts'] as $key=>$item)
                 <h3 class="title"><span>{{$item->name}}</span></h3>
-            <div class="col-md-12 p-0 d-none d-md-block">
-                {{ Html::image($item->image,'',array('class'=>'h_product_category_img'))}}
-            </div>
+                <div class="col-md-12 p-0 d-none d-md-block">
+                    <a class="btn-more" href="{{URL::to('danh-muc/'.$item->path)}}">
+                        {{ Html::image($item->image,'',array('class'=>'h_product_category_img'))}}
+                    </a>
+                </div>
                 <div class="list-product">
                     <div class="row">
                         @foreach($item->listProduct as $key2=>$item2)
