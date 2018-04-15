@@ -8,11 +8,13 @@
 @section('styles')
     {{ Html::style('css/themes/default/default.css') }}
 @stop
+@section('slider')
+    @include('frontend.common.slider')
+@stop
 {{--@section('slider')--}}
-    {{--@include('frontend.common.slider')--}}
+{{--@include('frontend.common.slider')--}}
 {{--@stop--}}
 @section('container')
-    @include('frontend.common.slider')
     @include('frontend.common.special')
     @include('frontend.home.h_introduce')
     @include('frontend.home.h_product')

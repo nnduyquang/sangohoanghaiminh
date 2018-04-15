@@ -11,7 +11,10 @@
                     </div>
                     <div id="p-short-info" class="col-md-6">
                         <h1 class="title">{{$data['product']->name}}</h1>
-                        <span class="product-code">Mã Sản phẩm: WS 821-12</span>
+                        <span class="product-code">Mã Sản phẩm: {{$data['product']->code}}</span>
+                        <div class="p_description">
+                            {!!  $data['product']->description!!}
+                        </div>
                         @if($data['product']->price!=0)
                             @if($data['product']->sale!=0)
                                 <span class="price-sale">{{$data['product']->final_price}} VND</span>
@@ -28,10 +31,10 @@
                         <input class="btn-confirm btn" type="button" value="0962.599.482">
                     </div>
                 </div>
-                <div class="col-md-12 p-description">
-                    {!!  $data['product']->description!!}
+                {{--<div class="col-md-12 p-description">--}}
+                    {{--{!!  $data['product']->description!!}--}}
 
-                </div>
+                {{--</div>--}}
                 <div id="p-content" class="col-md-12">
                     {!!  $data['product']->content!!}
                     <div class="contact-info">

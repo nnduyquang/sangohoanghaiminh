@@ -26,6 +26,9 @@
     {{--@yield('slider')--}}
     <div class="container-fluid" style="padding-top: 20px">
         <div class="row">
+            <div class="col-md-12">
+                @yield('slider')
+            </div>
             <div class="col-md-3">
                 @include('frontend.common.sidebar.index')
             </div>

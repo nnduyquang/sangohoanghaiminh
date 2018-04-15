@@ -1,10 +1,7 @@
 <div id="se_info">
     <div class="container p-0">
         <div class="row">
-            <div class="col-md-3 p-0">
-                @include('frontend.common.sidebar.index')
-            </div>
-            <div class="se_info_result col-md-9">
+            <div class="se_info_result col-md-12">
                 <h1 class="title">KẾT QUẢ TÌM KIẾM CHO: <span class="key-search"> {{$data['key-search']}}</span></h1>
                 <div class="list-product col-md-12 p-0">
                     <div class="row">
