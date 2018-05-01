@@ -205,25 +205,12 @@ class MenuRepository extends EloquentRepository implements MenuRepositoryInterfa
     {
         $data = [];
         $categoryMain = CategoryItem::where('level', MENU_GOC)->where('type', CATEGORY_PRODUCT)->get();
-
-//        foreach ($categoryMain as $key => $item) {
-//            $categorySub = CategoryItem::where('parent_id', $item->id)->get();
-//            $item->categorySub = $categorySub;
-//
-//        }
-//        $postMain = CategoryItem::where('level', MENU_GOC)->where('type', CATEGORY_POST)->where('path', 'bao-gia-sat-thep')->first();
-//
-//        $postSub = Post::where('post_type', $postMain->id)->get();
-//        $postMain->postSub = $postSub;
-//
-//        $priceMain = CategoryItem::where('level', MENU_GOC)->where('type', CATEGORY_POST)->where('path', 'gia-vat-lieu-xay-dung')->first();
-//
-//        $priceSub = Post::where('post_type', $priceMain->id)->get();
-//        $priceMain->priceSub = $priceSub;
+        foreach ($categoryMain as $key=>$data){
+            $categorySub=CategoryItem::where('level', MENU_CAP_1)->where('parent_id',$data->id)->where('type', CATEGORY_PRODUCT)->get();
+            $data->categorySub=$categorySub;
+        }
 
         $data['categoryMain'] = $categoryMain;
-//        $data['postMain'] = $postMain;
-//        $data['priceMain'] = $priceMain;
         return $data;
     }
 

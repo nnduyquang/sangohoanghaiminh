@@ -59,7 +59,6 @@
 
       li {
         display: inline-block;
-        padding: 15px;
         position: relative;
         i {
           color: white;
@@ -71,6 +70,9 @@
           text-transform: uppercase;
           font-weight: bold;
           color: white;
+          display: block;
+          width: 100%;
+          padding: 15px;
         }
       }
       li:hover {
@@ -78,7 +80,12 @@
       }
       li.has-item-down {
         transition: all 0.2s;
-        ul {
+        a{
+          width: 100%;
+          display: block;
+          padding: 15px;
+        }
+        ul.sub_menu {
           position: absolute;
           opacity: 0;
           display: none;
@@ -86,20 +93,55 @@
           top: 100%;
           left: 0;
           z-index: 9;
-          width: 160%;
-          li {
+          text-align: left;
+          li.li-normal,li.has-item-left {
             display: block;
-            padding-left: 10px;
             transition: all 0.2s;
+            width: 190px;
           }
-          li:hover {
+          li.li-normal:hover {
             padding-left: 20px;
           }
         }
       }
-      li.has-item-down:hover > ul {
+      li.has-item-down:hover ul.sub_menu {
         display: block;
         opacity: 1;
+        li.has-item-left{
+          transition: all 0.2s;
+          position: relative;
+
+          ul.sub_item_left{
+            position: absolute;
+            opacity: 0;
+            display: none;
+            background-color: $sub-color;
+            right:-160px;
+            top:0;
+            z-index: 9;
+            li.li-normal{
+              display: block;
+              padding-left: 10px;
+              transition: all 0.2s;
+              a{
+                color: white;
+              }
+            }
+            li.li-normal:hover {
+              padding-left: 20px;
+            }
+          }
+        }
+        li.has-item-left:hover{
+          padding-left: 20px;
+          a{
+            color: $main-color;
+          }
+        }
+        li.has-item-left:hover>ul.sub_item_left{
+          display: block;
+          opacity: 1;
+        }
       }
       ul.menu-search {
         display: block;

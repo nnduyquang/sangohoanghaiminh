@@ -13,9 +13,7 @@ class FrontendRepository implements FrontendRepositoryInterface
     public function getAllSidebar()
     {
         $sidebar = [];
-//        $categoryPosts = CategoryItem::where('type', 0)->get();
-        $categoryProducts = CategoryItem::where('type', 1)->where('isActive', 1)->orderBy('order')->get();
-//        $sidebar['categoryPosts'] = $categoryPosts;
+        $categoryProducts = CategoryItem::where('type', CATEGORY_PRODUCT)->where('isActive', 1)->orderBy('order')->get();
         $sidebar['categoryProducts'] = $categoryProducts;
         return $sidebar;
     }
@@ -88,7 +86,7 @@ class FrontendRepository implements FrontendRepositoryInterface
         $data = [];
         $configContact = Config::where('name', 'config-contact')->first();
         $data['configContact'] = $configContact;
-        $categoryMain = CategoryItem::where('type', CATEGORY_PRODUCT)->where('level', MENU_GOC)->get();
+        $categoryMain = CategoryItem::where('type', CATEGORY_PRODUCT)->where('level', MENU_CAP_1)->get();
         $data['categoryMain'] = $categoryMain;
         return $data;
     }

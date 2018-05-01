@@ -2,14 +2,14 @@
 
     <h3>DANH MỤC SẢN PHẨM</h3>
     @for($i=0;$i<count($sidebar['categoryProducts']);$i++)
-        @if($sidebar['categoryProducts'][$i]->level==0)
+        @if($sidebar['categoryProducts'][$i]->level==1)
             <div class="one-item">
                 <a href="{{URL::to('/danh-muc/'.$sidebar['categoryProducts'][$i]->path)}}"
                    class="title">{{$sidebar['categoryProducts'][$i]->name}}</a>
                 <ul class="ul-normal">
 
                     @foreach($sidebar['categoryProducts'] as $key=>$data)
-                        @if($data->level==1 &&$data->parent_id==$sidebar['categoryProducts'][$i]->id)
+                        @if($data->level==2 &&$data->parent_id==$sidebar['categoryProducts'][$i]->id)
                             <li class="li-normal"><a
                                         href="{{URL::to('danh-muc/'.$sidebar['categoryProducts'][$i]->path.'/'.$data->path)}}">{{$data->name}}</a>
                             </li>
