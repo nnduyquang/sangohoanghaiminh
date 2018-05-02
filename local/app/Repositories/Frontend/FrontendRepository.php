@@ -33,7 +33,7 @@ class FrontendRepository implements FrontendRepositoryInterface
 
     public function getAllListCategoryAndProduct()
     {
-        $categoryProducts = CategoryItem::where('type', 1)->where('level', 0)->where('isActive', 1)->orderBy('order')->get();
+        $categoryProducts = CategoryItem::where('type', 1)->where('level', 1)->where('isActive', 1)->orderBy('order')->get();
         foreach ($categoryProducts as $key => $data) {
             $products = Product::whereIn('category_product_id', function ($query) use ($data) {
                 $query->select('id')->from(with(new CategoryItem)->getTable())->where('parent_id', $data->id);
