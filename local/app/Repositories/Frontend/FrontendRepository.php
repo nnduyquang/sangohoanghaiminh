@@ -13,7 +13,7 @@ class FrontendRepository implements FrontendRepositoryInterface
     public function getAllSidebar()
     {
         $sidebar = [];
-        $categoryProducts = CategoryItem::where('type', CATEGORY_PRODUCT)->where('isActive', 1)->orderBy('order')->get();
+        $categoryProducts = CategoryItem::where('type', CATEGORY_PRODUCT)->where('isActive', 1)->orderBy('parent_id')->orderBy('order')->get();
         $sidebar['categoryProducts'] = $categoryProducts;
         return $sidebar;
     }
@@ -33,7 +33,7 @@ class FrontendRepository implements FrontendRepositoryInterface
 
     public function getAllListCategoryAndProduct()
     {
-        $categoryProducts = CategoryItem::where('type', 1)->where('level', 1)->where('isActive', 1)->orderBy('order')->get();
+        $categoryProducts = CategoryItem::where('type', 1)->where('level', 1)->where('isActive', 1)->orderBy('parent_id')->get();
         foreach ($categoryProducts as $key => $data) {
             $products = Product::whereIn('category_product_id', function ($query) use ($data) {
                 $query->select('id')->from(with(new CategoryItem)->getTable())->where('parent_id', $data->id);

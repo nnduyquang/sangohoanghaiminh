@@ -17,7 +17,7 @@
                             {{--@endforeach--}}
                             @foreach($listMenu['categoryMain'] as $key=>$item)
                                 @if(count($item->categorySub)>0)
-                                    <li class="has-item-left"><a href="">Sàn Gỗ</a>
+                                    <li class="has-item-left"><a href="">{{$item->name}}</a>
                                         <ul class="sub_item_left">
                                             @foreach($item->categorySub as $key2=>$item2)
                                                 <li class="li-normal"><a
